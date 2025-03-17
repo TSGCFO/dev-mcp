@@ -8,29 +8,26 @@
 
 2. Set up your Claude Desktop configuration to use the server.  
 
-```json
-{
-  "mcpServers": {
-    "browserbase": {
-      "command": "node",
-      "args": ["path/to/mcp-server-browserbase/browserbase/dist/index.js"],
-      "env": {
-        "BROWSERBASE_API_KEY": "<YOUR_BROWSERBASE_API_KEY>",
-        "BROWSERBASE_PROJECT_ID": "<YOUR_BROWSERBASE_PROJECT_ID>"
+    ```json
+    {
+      "mcpServers": {
+        "browserbase": {
+          "command": "node",
+          "args": ["path/to/mcp-server-browserbase/browserbase/dist/index.js"],
+          "env": {
+            "BROWSERBASE_API_KEY": "<YOUR_BROWSERBASE_API_KEY>",
+            "BROWSERBASE_PROJECT_ID": "<YOUR_BROWSERBASE_PROJECT_ID>"
+          }
+        }
       }
     }
-  }
-}
-```
+    ```
 
 3. Restart your Claude Desktop app and you should see the tools available clicking the 🔨 icon.
 
 4. Start using the tools! Below is an image of Claude closing a browser session.
 
-<p align="center">
-  <img src="../assets/browserbase-demo.png" alt="demo" width="600"/>
-</p>
-
+![demo](../assets/browserbase-demo.png)
 
 ## Tools
 
