@@ -1,0 +1,31 @@
+{
+  "name": "outlook-server",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "bin": {
+    "outlook-server": "./start-server.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "get-token": "node get-refresh-token.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "MCP server for Microsoft 365/Outlook integration",
+  "dependencies": {
+    "@azure/identity": "^3.3.0",
+    "@azure/msal-node": "^2.16.2",
+    "@microsoft/microsoft-graph-client": "^3.0.7",
+    "@modelcontextprotocol/sdk": "^1.4.1",
+    "express": "^4.21.2",
+    "html-to-text": "^9.0.5",
+    "isomorphic-fetch": "^3.0.0",
+    "juice": "^9.1.0",
+    "marked": "^11.2.0",
+    "moment": "^2.30.1",
+    "node-schedule": "^2.1.1",
+    "open": "^8.4.2"
+  }
+}

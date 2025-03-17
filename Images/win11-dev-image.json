@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "resources": [
+    {
+      "type": "Microsoft.DevCenter/devcenters/galleries/images",
+      "apiVersion": "2023-04-01",
+      "name": "win11-dev-image",
+      "properties": {
+        "displayName": "Windows 11 Development",
+        "description": "Windows 11 image with development tools",
+        "osType": "Windows",
+        "imageType": "Gallery",
+        "publisher": "MicrosoftWindowsDesktop",
+        "offer": "windows-ent-cpc",
+        "sku": "win11-22h2-ent-cpc-m365"
+      }
+    }
+  ]
+}

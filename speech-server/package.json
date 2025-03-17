@@ -1,0 +1,39 @@
+{
+  "name": "speech-server",
+  "version": "0.1.0",
+  "description": "MCP server for text-to-speech and document reading capabilities",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "speech-server": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "dev": "tsc --watch",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@google-cloud/text-to-speech": "^5.0.0",
+    "@modelcontextprotocol/sdk": "^0.6.0",
+    "mammoth": "^1.6.0",
+    "marked": "^4.3.0",
+    "microsoft-cognitiveservices-speech-sdk": "^1.42.0",
+    "node-wav-player": "^0.2.0",
+    "openai": "^4.83.0",
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/marked": "^4.3.0",
+    "@types/node": "^20.11.24",
+    "@types/pdf-parse": "^1.1.4",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

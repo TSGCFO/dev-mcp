@@ -1,0 +1,33 @@
+{
+  "name": "shell-server",
+  "version": "0.1.0",
+  "description": "running system commands and powershell integration",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "shell-server": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && node --input-type=module -e \"import { chmod } from 'fs/promises'; await chmod('build/index.js', '755');\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.6.0",
+    "node-pty": "^1.0.0",
+    "ps-node": "^0.1.6",
+    "sqlite3": "^5.1.7",
+    "uuid": "^11.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@types/ps-node": "^0.1.3",
+    "@types/sqlite3": "^3.1.11",
+    "@types/uuid": "^10.0.0",
+    "typescript": "^5.3.3"
+  }
+}
